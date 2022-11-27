@@ -5,10 +5,13 @@ public class RecursionMath {
     public static int recursiveMultiplication(int number, int times) {
         // If times is 1 
             // Return number 
-
+if (times == 1) {
+	return number;
+}
         // Else return number + recursiveMultiplication(number, times-1)
-
-        return 0;
+else {
+        return number+recursiveMultiplication(number, times-1);
+}
     }
 
     // Try this one on your own! 
@@ -16,7 +19,13 @@ public class RecursionMath {
     //       you can't divide anymore
     public static int recursiveDivision(int number, int numberToDivideBy) {
         
-        return 0;
+    if (numberToDivideBy == 1) {	
+        return number;
+    }
+    
+    else {
+    	return number-numberToDivideBy(number, numberToDivideBy-1);
+    }
     }
 
     // Try this one on your own!
