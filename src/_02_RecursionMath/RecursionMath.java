@@ -19,18 +19,24 @@ else {
     //       you can't divide anymore
     public static int recursiveDivision(int number, int numberToDivideBy) {
         
-    if (numberToDivideBy == 1) {	
-        return number;
+    if (numberToDivideBy > number) {	
+    	//System.out.println(number);
+        return 0;
     }
     
     else {
-    	return number-numberToDivideBy(number, numberToDivideBy-1);
+    	//System.out.println(number + " " + (numberToDivideBy));
+    	return 1+recursiveDivision(number-numberToDivideBy, numberToDivideBy);
     }
     }
 
     // Try this one on your own!
     public static int recursivePower(int number, int power) {
-        
-        return 0;
+        if (power == 0) {
+        return number;
+        }
+        else {
+        	return number*recursivePower(number, power-1);
+        }
     }
 }
